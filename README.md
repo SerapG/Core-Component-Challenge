@@ -44,7 +44,3 @@ Sample Output
 
 "Hello from Core Component" at the top.
 Two buttons, one triggering an alert and another showing "Hello World!" dynamically.
-
-```
-
-```

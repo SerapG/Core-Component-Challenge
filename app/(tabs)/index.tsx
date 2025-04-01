@@ -1,32 +1,34 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import React from "react";
+import { SafeAreaView,StyleSheet,Text,View } from "react-native";
+import ResponsiveButton from "@/components/ResponsiveButton";
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import CoreComponent from "@/components/CoreComponent";
 
-export default function HomeScreen() {
-  return (
-    <CoreComponent/>
-  );
+const index = () => {
+
+  const handlePress = () => {
+    console.log('Butona Tiklandi')
+  }
+  return(
+    <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
+        <Text style={styles.text}>Hello My Friend </Text>
+        <ResponsiveButton title="Button" onPress={handlePress}/>
+      </View>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  container:{
+    flex:1,
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor: "#FFFFFF"
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
+  text:{
+    fontSize:38,
+    fontWeight:"bold",
+    color:"pink"
+  }
+})
+export default index;

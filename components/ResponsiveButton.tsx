@@ -1,7 +1,5 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, Dimensions } from 'react-native';
-import PropTypes from 'prop-types';
-
 
 // Ekran boyutlarını almak için Dimensions API'si
 const { width } = Dimensions.get('window');
@@ -12,13 +10,6 @@ const ResponsiveButton = ({title,onPress}) => {
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
-
-  ResponsiveButton.propTypes = {
-    title: PropTypes.string.isRequired, // title, string türünde olmalı
-    onPress: PropTypes.func.isRequired, // onPress, bir fonksiyon olmalı
-  };
-  
-  
 };
 
 const styles = StyleSheet.create({
@@ -28,13 +19,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'pink',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 15, // Köşeleri yuvarlatma
+    borderRadius: 15, 
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 4,
-    elevation: 20, // Android'de gölge efekti için
-    marginTop:15,
+    elevation: 20,
   },
   buttonText: {
     color: 'white',
